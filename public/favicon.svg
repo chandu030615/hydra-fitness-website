@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HYDRA FITNESS">
+  <rect width="64" height="64" rx="32" fill="#293a2e"/>
+  <g fill="none" stroke="#dfe5d8" stroke-width="4" stroke-linecap="round">
+    <path d="M19 22v20M45 22v20"/>
+    <path d="M15 26v12M49 26v12"/>
+    <path d="M19 32h26"/>
+  </g>
+</svg>
