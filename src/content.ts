@@ -105,36 +105,6 @@ export const trainers = [
   },
 ]
 
-export const testimonials = [
-  {
-    quote:
-      'I came in wanting to feel stronger, not just look different. The coaching met me where I was and gave me a plan I could actually stick to.',
-    name: 'Ananya R.',
-    detail: 'Strength training · 8 months in',
-    initials: 'AR',
-    highlight: 'Deadlifting 60 kg',
-    featured: false,
-  },
-  {
-    quote:
-      'No shouting, no pressure, no mirrors full of ego. Just good people, thoughtful sessions and a room that makes you want to show up.',
-    name: 'Vikram S.',
-    detail: 'Personal training · Member since 2024',
-    initials: 'VS',
-    highlight: 'Three sessions every week',
-    featured: true,
-  },
-  {
-    quote:
-      'The small changes added up faster than I expected — better sleep, steadier energy and a routine that finally fits around real life.',
-    name: 'Priya M.',
-    detail: 'Functional fitness · 12-week progress',
-    initials: 'PM',
-    highlight: 'Stronger, week by week',
-    featured: false,
-  },
-]
-
 export const gallery = [
   {
     src: unsplash('photo-1517836357463-d25dfeac3438', 1400),

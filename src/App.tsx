@@ -12,7 +12,6 @@ import {
   MoveUpRight,
   Phone,
   Sparkles,
-  Star,
   X,
 } from 'lucide-react'
 import {
@@ -23,7 +22,6 @@ import {
   personalTraining,
   photos,
   plans,
-  testimonials,
   trainers,
   whatsapp,
   whatsappLink,
@@ -386,37 +384,31 @@ export default function App() {
           </div>
         </section>
 
-        <section className="testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
+        <section className="testimonials-section" id="why-hydra" aria-labelledby="why-hydra-title">
           <div className="section-shell section-pad">
             <Reveal>
               <div className="section-heading">
                 <div>
-                  <p className="eyebrow"><span className="eyebrow-dot" /> MEMBERS, IN THEIR OWN WORDS</p>
-                  <h2 id="testimonials-title">The proof is<br /><em>in the practice.</em></h2>
+                  <p className="eyebrow"><span className="eyebrow-dot" /> A CLEARER WAY TO START</p>
+                  <h2 id="why-hydra-title">Make your plan<br /><em>work for you.</em></h2>
                 </div>
-                <p className="section-intro">Different starting points, different goals, one shared habit: showing up for themselves.</p>
+                <p className="section-intro">No invented reviews or exaggerated promises. Just clear plans, real support, and a space to build your routine.</p>
               </div>
             </Reveal>
 
             <div className="testimonial-grid">
-              {testimonials.map((testimonial, index) => (
-                <Reveal className="testimonial-item" delay={index * 0.1} key={testimonial.name}>
-                  <figure className={testimonial.featured ? 'testimonial-card testimonial-featured' : 'testimonial-card'}>
-                    <div className="testimonial-top">
-                      <span className="stars" role="img" aria-label="Rated 5 out of 5 stars">
-                        {Array.from({ length: 5 }, (_, star) => (
-                          <Star key={star} size={12} fill="currentColor" aria-hidden="true" />
-                        ))}
-                      </span>
-                      <span className="testimonial-index">{`0${index + 1}`}</span>
-                    </div>
-                    <blockquote>{testimonial.quote}</blockquote>
-                    <p className="testimonial-highlight">{testimonial.highlight}</p>
-                    <figcaption>
-                      <span className="testimonial-avatar" aria-hidden="true">{testimonial.initials}</span>
-                      <span><strong>{testimonial.name}</strong><small>{testimonial.detail}</small></span>
-                    </figcaption>
-                  </figure>
+              {[
+                { label: '01 / TRANSPARENT', title: 'Know what you pay for.', body: 'Choose from clearly listed Strength, Cardio, Couples, or Student plans with monthly and longer-term options.' },
+                { label: '02 / SUPPORT', title: 'Train with direction.', body: 'Ask about personal training, a trial session, or the plan that best fits your goal and schedule.' },
+                { label: '03 / YOUR PACE', title: 'Start where you are.', body: 'Visit the gym, meet the team, and build a routine that feels practical for your real life.' },
+              ].map((card, index) => (
+                <Reveal className="testimonial-item" delay={index * 0.1} key={card.label}>
+                  <article className={index === 1 ? 'testimonial-card testimonial-featured' : 'testimonial-card'}>
+                    <div className="testimonial-top"><span className="plan-kicker">{card.label}</span><span className="testimonial-index">{`0${index + 1}`}</span></div>
+                    <h3>{card.title}</h3>
+                    <p className="testimonial-highlight">{card.body}</p>
+                    <a className="text-link" href="#free-trial">Explore your options <ArrowRight size={15} aria-hidden="true" /></a>
+                  </article>
                 </Reveal>
               ))}
             </div>
